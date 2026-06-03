@@ -1,0 +1,96 @@
+/* global.css - Add to your main CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-dark: #1A1A2E;
+  --primary: #2D2D44;
+  --accent: #D4A5A5;
+  --accent-dark: #B88686;
+  --accent-light: #F5E6E6;
+  --gold: #C9A96E;
+  --text-dark: #1E1E2A;
+  --text-muted: #6B6B7A;
+  --text-light: #FFFFFF;
+  --bg-light: #FAFAFA;
+  --bg-white: #FFFFFF;
+  --border-light: #EAEAEF;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md: 0 8px 25px rgba(0,0,0,0.08);
+  --shadow-lg: 0 15px 35px rgba(0,0,0,0.12);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+.btn-primary-custom {
+  background: var(--primary-dark);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-primary-custom:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  border: 1.5px solid white;
+  color: white;
+  padding: 12px 32px;
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-outline-custom:hover {
+  background: white;
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.container-custom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
